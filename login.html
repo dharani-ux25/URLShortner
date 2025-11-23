@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Admin Login</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-slate-50">
+<div class="min-h-screen flex items-center justify-center">
+<div class="w-full max-w-md bg-white p-6 rounded-2xl shadow">
+<h1 class="text-xl font-bold mb-4">Admin Login</h1>
+<div class="space-y-3">
+<input id="email" placeholder="email" class="w-full p-2 border rounded" />
+<input id="password" type="password" placeholder="password" class="w-full p-2 border rounded" />
+<div class="flex gap-2">
+<button id="btn-login" class="px-4 py-2 bg-indigo-600 text-white rounded">Login</button>
+<button id="btn-register" class="px-4 py-2 border rounded">Register</button>
+</div>
+<div id="auth-msg" class="text-sm text-red-600"></div>
+</div>
+</div>
+</div>
+<script src="/admin/login.js"></script>
+</body>
+</html>

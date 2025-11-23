@@ -1,0 +1,60 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-slate-50">
+<div id="app" class="min-h-screen flex">
+<!-- Sidebar -->
+<aside id="sidebar" class="sidebar bg-white w-64 p-4 border-r">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-bold">Admin</h2>
+<button id="collapseBtn" class="text-sm px-2 py-1 border rounded">◀</button>
+</div>
+<nav class="space-y-2">
+<a href="#" class="block p-2 rounded hover:bg-slate-100" data-tab="overview">Overview</a>
+<a href="#" class="block p-2 rounded hover:bg-slate-100" data-tab="links">Links</a>
+</nav>
+<div class="mt-6">
+<button id="btn-logout" class="px-3 py-1 border rounded text-sm">Logout</button>
+</div>
+</aside>
+
+
+<!-- Main area -->
+<main class="flex-1 p-6">
+<div id="overviewView">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+<div class="p-4 bg-white rounded shadow">
+<div class="text-sm text-gray-500">Total Links</div>
+<div id="totalLinks" class="text-2xl font-bold">—</div>
+</div>
+<div class="p-4 bg-white rounded shadow">
+<div class="text-sm text-gray-500">Total Clicks</div>
+<div id="totalClicks" class="text-2xl font-bold">—</div>
+</div>
+<div class="p-4 bg-white rounded shadow">
+<div class="text-sm text-gray-500">Recent Activity</div>
+<div id="recentActivity" class="text-base">—</div>
+</div>
+</div>
+</div>
+
+
+<div id="linksView" style="display:none;">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-semibold">Links</h3>
+<input id="search" placeholder="Search URL or code" class="p-2 border rounded" />
+</div>
+<div id="linksTable" class="space-y-2"></div>
+</div>
+
+
+</main>
+</div>
+
+
+<script src="/admin/dashboard.js"></script>
+</body>
+</html>
